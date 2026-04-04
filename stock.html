@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sup2Stock - Gestion de Stock</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Sup2stock Logo">
+        </div>
+        <div class="loggin">
+            <span class="user-badge">Bonjour, M.Graven</span>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-titles">
+            <h1>UN SITE MASTOCK POUR LES ENTREPRISES D'AVENIR</h1>
+            <p>NE SOYEZ PLUS JAMAIS A COURT DE STOCK</p>
+        </div>
+
+        <div class="containers-wrapper">
+            <section class="white-card">
+                <div class="list-header">
+                    <span>Ingredient</span>
+                    <span>Stock</span>
+                </div>
+                
+                <div class="ingredients-table">
+                    <div class="ingredient-row">
+                        <label>Pain</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="ingredient-row">
+                        <label>Steak</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="ingredient-row">
+                        <label>Tomate</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div class="ingredient-row">
+                        <label>Salade</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                </div>
+            </section>
+
+            <section class="white-card">
+                <form class="order-form">
+                    <input type="text" placeholder="Nom Prénom :">
+                    <input type="email" placeholder="Adresse email :">
+                    <input type="text" placeholder="Coordonnées banquaires :">
+                    <textarea placeholder="Détail de la commande:"></textarea>
+                    <button type="submit" class="btn-commander">Commander</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+</body>
+</html>
