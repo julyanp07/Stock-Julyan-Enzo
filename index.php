@@ -25,7 +25,7 @@
 
         
         <div class="loggin">
-            <button onclick="window.location.href='stock.html'">Se connecter / S'inscrire</button>
+            <button onclick="window.location.href='stock.php'">Se connecter / S'inscrire</button>
         </div>
         </nav>
     </header>
@@ -35,7 +35,7 @@
             <h1>UN SITE MASTOCK POUR LES ENTREPRISES D'AVENIR</h1>
             <p>NE SOYEZ PLUS JAMAIS A COURT DE STOCK</p>
 
-            <a href="stock.html" class="cta-button">ACCEDER A VOTRE STOCKAGE</a>
+            <a href="stock.php" class="cta-button">ACCEDER A VOTRE STOCKAGE</a>
         </div>
     </main>
     
