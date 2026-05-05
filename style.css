@@ -1,50 +1,51 @@
-/* Reset global */
+/* Reset global : S'applique à absolument tous les éléments du site (*) */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial Narrow', sans-serif;
+    margin: 0; /* Enlève les marges extérieures par défaut du navigateur */
+    padding: 0; /* Enlève les marges intérieures par défaut */
+    box-sizing: border-box; /* Hyper important : la bordure et le padding sont inclus dans la largeur totale (évite que les éléments débordent) */
+    font-family: 'Arial Narrow', sans-serif; /* Applique cette police partout */
 }
 
+/* Le corps de la page (le fond global derrière tout le reste) */
 body {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #1a1a1a; /* Un gris très foncé / noir */
+    color: white; /* Le texte de base sera blanc */
 }
 
 /* --- Barre de Navigation --- */
 .navbar {
-    background-color: #2e3b9e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    height: 80px;
+    background-color: #2e3b9e; /* Le bleu de votre charte graphique */
+    display: flex; /* Active Flexbox, qui permet d'aligner les éléments facilement sur une ligne */
+    justify-content: space-between; /* Pousse les éléments (Logo, icônes, bouton) pour qu'ils soient espacés au maximum */
+    align-items: center; /* Centre les éléments verticalement dans la barre */
+    padding: 0 40px; /* Espace de 40px à gauche et à droite pour ne pas coller au bord de l'écran */
+    height: 80px; /* La hauteur fixe de votre menu */
 }
 
 .logo img {
-    height: 45px;
+    height: 45px; /* On limite la taille du logo pour qu'il ne déforme pas le menu */
 }
 
 .icons {
-    display: flex;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 25px;
+    display: flex; /* Aligne les petits boutons d'icônes en ligne */
+    gap: 10px; /* Crée un espace de 10px entre chaque icône */
+    padding: 15px; /* Espace à l'intérieur de la petite bulle blanche des icônes */
+    border-radius: 25px; /* Arrondit les angles pour faire un effet "pilule" */
     background-color: white;
-    border: 1px solid rgba(20, 0, 92, 0.2);
+    border: 1px solid rgba(20, 0, 92, 0.2); /* Ajoute une très fine bordure bleue presque transparente (0.2) */
 }
 
 .icons button {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
+    font-size: 24px; /* Taille des émojis/icônes */
+    cursor: pointer; /* Transforme la souris en "petite main" quand on passe dessus */
+    background: none; /* Enlève le fond gris moche par défaut des boutons HTML */
+    border: none; /* Enlève la bordure par défaut des boutons HTML */
 }
 
 .loggin button {
     padding: 8px 15px;
-    border-radius: 15px;
-    font-weight: bold;
+    border-radius: 15px; /* Arrondit le bouton "Retour à l'accueil" */
+    font-weight: bold; /* Met le texte en gras */
     cursor: pointer;
 }
 
@@ -56,100 +57,107 @@ body {
     font-weight: bold;
 }
 
-/* --- Section Hero (Fond) --- */
+/* --- Section Hero (Fond principal de la page) --- */
 .hero-section {
-    min-height: calc(100vh - 80px);
-    background: url('img/FOND S2S.webp') no-repeat center center/cover;
+    /* calc() calcule la taille en direct : 100vh (100% de la hauteur de l'écran) moins les 80px du menu, pour éviter qu'on puisse scroller dans le vide */
+    min-height: calc(100vh - 80px); 
+    background: url('img/FOND S2S.webp') no-repeat center center/cover; /* cover permet à l'image de couvrir tout l'écran sans se déformer */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Organise les éléments en colonne (les titres en haut, les cartes en bas) */
+    align-items: center; /* Centre tout horizontalement */
 }
 
+/* Bandeau blanc qui contient le titre H1 et le P */
 .hero-titles {
     background-color: white;
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    margin-bottom: 30px;
+    width: 100%; /* Prend toute la largeur de l'écran */
+    text-align: center; /* Centre le texte */
+    padding: 25px 0; /* Espace en haut et en bas du texte */
+    margin-bottom: 30px; /* Pousse les cartes blanches vers le bas pour ne pas qu'elles collent au titre */
 }
 
 .hero-titles h1 {
     color: black;
-    font-size: 2.2rem;
-    font-weight: 900;
+    font-size: 2.2rem; /* "rem" est une unité relative (adapte la taille de la police) */
+    font-weight: 900; /* Texte extra gras */
 }
 
 .hero-titles p {
     color: black;
     font-weight: bold;
     font-size: 1.1rem;
-    margin-top: 5px;
+    margin-top: 5px; /* Petit espace entre le H1 et le P */
 }
 
-/* --- Cartes Blanches --- */
+/* --- Cartes Blanches (Zone globale qui contient les 2 cartes) --- */
 .containers-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    display: flex; /* Met les deux cartes l'une à côté de l'autre */
+    justify-content: center; /* Centre les cartes au milieu de l'écran */
+    gap: 40px; /* Espace de 40px entre la carte Stock et la carte Commande */
     width: 100%;
     padding: 20px;
 }
 
+/* Design de chaque carte individuelle */
 .white-card {
     background-color: white;
-    border-radius: 50px;
-    padding: 40px;
-    width: 450px;
-    min-height: 520px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 50px; /* Coins très arrondis */
+    padding: 40px; /* Marge intérieure pour que le texte ne colle pas aux bords */
+    width: 450px; /* Largeur fixe de la carte */
+    min-height: 520px; /* Hauteur minimum pour que les deux cartes fassent la même taille de base */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Effet d'ombre 3D (Décalage X, Décalage Y, Flou, Couleur noire transparente) */
 }
 
+/* Ligne "Ingrédient --- Stock" en haut de la liste */
 .list-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Met "Ingrédient" tout à gauche et "Stock" tout à droite */
     font-size: 1.6rem;
     font-weight: bold;
     color: black;
     margin-bottom: 35px;
 }
 
+/* La liste des ingrédients */
 .ingredients-table {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
+    flex-direction: column; /* Met chaque ingrédient l'un en dessous de l'autre */
+    gap: 25px; /* Espace entre chaque ligne d'ingrédient */
 }
 
-/* --- Formulaire --- */
+/* --- Formulaire de commande --- */
 .order-form {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /* Met les champs du formulaire l'un sous l'autre */
+    gap: 15px; /* Espace entre chaque champ */
 }
 
+/* On regroupe les inputs, le textarea et le bouton pour leur donner le même style de base */
 .order-form input,
 .order-form textarea,
 .btn-commander {
-    background-color: #dcdcdc;
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
+    background-color: #dcdcdc; /* Gris clair pour les champs à remplir */
+    border: none; /* Pas de contour noir */
+    border-radius: 15px; /* Coins arrondis pour les champs */
+    padding: 15px; /* Zone cliquable plus grande */
     font-size: 1.1rem;
     font-weight: bold;
-    width: 100%;
+    width: 100%; /* Le champ prend toute la largeur de la carte */
 }
 
 .order-form textarea {
-    height: 140px;
-    resize: none;
+    height: 140px; /* Le champ de texte (détail commande) est plus grand que les autres */
+    resize: none; /* Empêche l'utilisateur d'agrandir la zone de texte en tirant sur le coin (ça casserait le design) */
 }
 
 .btn-commander {
     cursor: pointer;
     margin-top: 10px;
     font-size: 1.4rem;
-    transition: background 0.2s;
+    transition: background 0.2s; /* Ajoute une petite animation douce de 0.2 secondes quand la couleur change */
 }
 
+/* L'état "Hover" : Ce qu'il se passe quand on passe la souris SUR le bouton sans cliquer */
 .btn-commander:hover {
-    background-color: #c0c0c0;
+    background-color: #c0c0c0; /* Le bouton devient un peu plus foncé au passage de la souris */
 }
